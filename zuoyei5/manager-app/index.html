@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图书收藏管理</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; max-width: 640px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 22px; }
+    #add-form input { padding: 6px; margin-right: 8px; }
+    #title-input { width: 180px; }
+    #author-input { width: 120px; }
+    #rating-input { width: 70px; }
+    .tip { color: #c00; font-size: 14px; min-height: 20px; }
+    #search-input { width: 100%; padding: 6px; margin: 8px 0; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 8px 0; border-bottom: 1px solid #eee; }
+    li .info { margin-right: 12px; }
+    button { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>图书收藏</h1>
+
+  <form id="add-form" novalidate>
+    <input type="text" id="title-input" placeholder="书名">
+    <input type="text" id="author-input" placeholder="作者">
+    <input type="number" id="rating-input" placeholder="评分" min="0" max="5" step="0.1">
+    <button type="submit">添加</button>
+  </form>
+  <p class="tip" id="tip"></p>
+
+  <input type="text" id="search-input" placeholder="搜索书名或作者">
+  <ul id="book-list"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
